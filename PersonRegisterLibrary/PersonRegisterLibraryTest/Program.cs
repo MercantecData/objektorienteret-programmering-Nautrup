@@ -8,14 +8,25 @@ namespace PersonRegisterLibraryTest
     {
         static List<Person> personList = new List<Person>();
         static bool isRunning = true;
+
         static void Main(string[] args)
         {
             CreatePersonRegister();
+            Dictionaries();
+            TestMethod();
             //Menu();
             //PrintRegister();
             //Dictionaries();
          
             Console.ReadKey();
+        }
+
+        static void TestMethod()
+        {
+            Dictionary<int, string> personDic = new Dictionary<int, string>();
+            PersonDictionary ps = new PersonDictionary(name: "Lars Landkort", 22);
+            personDic.Add(ps.age, ps.name);
+
         }
 
         static void Menu()
@@ -72,15 +83,7 @@ namespace PersonRegisterLibraryTest
             Dictionary<bool, float> boolFloatValue = new Dictionary<bool, float>();
             boolFloatValue.Add(true, 1.0f);
             boolFloatValue.Add(false, 1.1f);
-            boolFloatValue.Add(true, 1.2f);
-            boolFloatValue.Add(true, 1.3f);
-            boolFloatValue.Add(true, 1.4f);
-            boolFloatValue.Add(false, 1.5f);
-            boolFloatValue.Add(false, 1.6f);
-            boolFloatValue.Add(false, 1.7f);
-            boolFloatValue.Add(false, 1.8f);
-            boolFloatValue.Add(false, 1.9f);
-            boolFloatValue.Add(false, 1.10f);
+            // hvordan skal man kunne lave 10, når man kun har 2 keys og bruge?
 
             foreach (var item in boolFloatValue)
             {
