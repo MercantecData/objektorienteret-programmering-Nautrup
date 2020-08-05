@@ -14,7 +14,7 @@ namespace PersonRegisterLibraryTest
         {
             //CreatePersonRegister();
             //Menu();
-            Console.WriteLine(calc.CalcProcent(25, 1100));
+
             Console.ReadKey();
         }
 

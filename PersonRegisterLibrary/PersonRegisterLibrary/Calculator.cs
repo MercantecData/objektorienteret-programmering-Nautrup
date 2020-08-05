@@ -9,7 +9,7 @@ namespace PersonRegisterLibrary
         /// <summary>
         /// Plus to hel tal sammen
         /// </summary>
-       public int CalcPlus(int num1, int num2)
+       public int CalcPlus(int num1, int num2) 
         {
             return num1 + num2;
         }
@@ -36,7 +36,7 @@ namespace PersonRegisterLibrary
         public int CalcMinus(int num1, int num2)
         {
             return num1 - num2;
-        }
+        } 
 
         /// <summary>
         /// Minus to decimal tal sammen (float)
@@ -103,7 +103,7 @@ namespace PersonRegisterLibrary
         }
 
         /// <summary>
-        /// Tag x antal procent af et beløb
+        /// Tager x antal procent af et beløb
         /// </summary>
         public double CalcProcent(double procent, double number)
         {

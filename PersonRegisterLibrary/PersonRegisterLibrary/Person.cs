@@ -60,7 +60,7 @@ namespace PersonRegisterLibrary
 
         public string ReturnPersonInformation ()
         {
-            return $"Navn: {name} {lastName}\nAlder: {age}\nBy: {city}\nJob: {job.ReturnJobDescription()}";
+            return $"Navn: {name} {lastName}\nAlder: {age}\nBy: {city}\nJob: {job.ReturnJobInformation()}";
         }
     }
 }

@@ -17,7 +17,7 @@ namespace PersonRegisterLibrary
             this.description = description;
         }
 
-        public string ReturnJobDescription()
+        public string ReturnJobInformation()
         {
             return $"{title}\nTimeløn: {salary} DKK\nBeskrivelse: {description}";
         }
