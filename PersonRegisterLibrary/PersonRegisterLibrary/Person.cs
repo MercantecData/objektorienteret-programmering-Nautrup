@@ -29,6 +29,11 @@ namespace PersonRegisterLibrary
             person = new Person(this.name, this.lastName, this.age, this.city, this.job);
         }
 
+        public string EditUserName(Person person, string newName)
+        {
+            return person.name = newName;
+        }
+
         public Person FindPerson(string nameToFind)
         {
             foreach (Person pers in personList)

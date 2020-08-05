@@ -14,6 +14,7 @@ namespace PersonRegisterLibraryTest
         {
             //CreatePersonRegister();
             //Menu();
+            EditUser();
 
             Console.ReadKey();
         }
@@ -79,13 +80,23 @@ namespace PersonRegisterLibraryTest
             BackToMenu();
         }
 
+        static void EditUser()
+        {
+            Person newPerson = new Person("Thomas", "Tæ", 1, "Test", new Job("Test", 11111, "TEST"));
+            Console.WriteLine(newPerson.ReturnPersonInformation());
+            newPerson.EditUserName(newPerson, "Peter");
+            Console.WriteLine("-------------------------------------");
+            Console.WriteLine(newPerson.ReturnPersonInformation());
+            Console.ReadLine();
+        }
+
         static void SearchForPerson() // Finder en person ved navn
         {
             Person newPerson = new Person("Thomas", "Tæ", 1, "Test", new Job("Test", 11111, "TEST"));
             Console.Write("Navn på personen: ");
+            
             string inputName = Console.ReadLine();
             newPerson.FindPerson(inputName);
-
         }
 
        
