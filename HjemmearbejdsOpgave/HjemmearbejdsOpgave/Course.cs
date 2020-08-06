@@ -6,7 +6,7 @@ namespace HjemmearbejdsOpgave
 {
     public class Course
     {
-        string name;
+        public string name;
         Classroom classroom;
 
         public Course(string name, Classroom classroom)
@@ -15,15 +15,11 @@ namespace HjemmearbejdsOpgave
             this.classroom = classroom;
         }
 
-        public List<Student> WhoIsMemberOf(string courseName, Student student)
+        public List<string> ReturnCourseList(Course course)
         {
-            List<Student> memberOfCourse = new List<Student>();
-            if (name == courseName)
-            {
-                memberOfCourse.Add(student);
-            }
-            return memberOfCourse;
+            List<string> courseList = new List<string>();
+            courseList.Add(course.name);
+            return courseList;
         }
-
     }
 }

@@ -6,7 +6,7 @@ namespace HjemmearbejdsOpgave
 {
     public class Student
     {
-        string name;
+        public string name;
         string lastName;
         string emailAddress;
         Address addresse;
@@ -23,15 +23,31 @@ namespace HjemmearbejdsOpgave
             numberOfStudents++;
         }
 
-        public List<Student> ReturnMembersOfCourse(Course course, Student student, string courseName)
+
+        public List<string> PrintcourseList()
         {
-            List<Student> memberOf = new List<Student>();
-            foreach (var studentMemberOf in course.WhoIsMemberOf(courseName: courseName, student))
+            foreach (var i in courseList)
             {
-                memberOf.Add(studentMemberOf);
-                //Console.WriteLine($"Medlem af {courseName}: {studentMemberOf.ReturnStudentInformation()}");
+                switch (i)
+                {
+                    case IEnumerable<object> li:
+                        Console.WriteLine($"List: {string.Join(", ", li)}");
+                        break;
+                    default:
+                        Console.WriteLine(i);
+                        break;
+                }
             }
-            return memberOf;
+            List<string> list = new List<string>();
+            for (int i = 0; i < courseList.Count; i++)
+            {
+                list.Add(courseList[i].name);
+            }
+            //foreach (var item in courseList)
+            //{
+            //    list.Add(item.ReturnCourseList(item.name));
+            //}
+            return list;
         }
 
         public int ReturnTotalAmountOfStudents()

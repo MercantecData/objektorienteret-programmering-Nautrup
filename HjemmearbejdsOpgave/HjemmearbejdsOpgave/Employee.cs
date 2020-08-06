@@ -6,22 +6,58 @@ namespace HjemmearbejdsOpgave
 {
     public class Employee
     {
-        string name;
+        public string name;
         string lastName;
         decimal salary;
+        bool payed;
         string emailAddress;
-        List<Course> courses;
+        List<Course> courses = new List<Course>();
+        Address address;
         int numberOfEmployees;
 
-        public Employee(string name, string lastName, decimal salary, string emailAddress)
+        public Employee(string name, string lastName, decimal salary, string emailAddress, Address address, Course course)
         {
             this.name = name;
             this.lastName = lastName;
             this.salary = salary;
             this.emailAddress = emailAddress;
-            courses = new List<Course>();
+            this.address = address;
+            this.courses.Add(course);
+
             numberOfEmployees++;
         }
+
+        public bool IsEmployeePaied()
+        {
+            DateTime createDate = new DateTime(2020, 8,
+                                    DateTime.DaysInMonth(2020, 8));
+            if (DateTime.Now < createDate) // Not payed
+            {
+                payed = false;
+                return payed;
+            }
+            else // Payed
+            {
+                payed = true;
+                return payed;
+            }
+        }
+        
+        public List<Course> ReturnCoursesHeTeaches()
+        {
+            List<Course> coursesList = new List<Course>();
+            for (int i = 0; i < courses.Count; i++)
+            {
+                coursesList.Add(courses[i]);
+            }
+
+            //foreach (var course in courses)
+            //{
+            //    coursesList.Add(course);
+            //}
+            return coursesList;
+        }
+
 
         public int ReturnTotalAmountOfEmployees()
         {
