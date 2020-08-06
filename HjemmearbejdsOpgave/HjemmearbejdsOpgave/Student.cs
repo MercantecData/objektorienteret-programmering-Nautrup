@@ -24,43 +24,32 @@ namespace HjemmearbejdsOpgave
         }
 
 
-        public List<string> PrintcourseList()
+        public void PrintcourseList()
         {
-            foreach (var i in courseList)
-            {
-                switch (i)
-                {
-                    case IEnumerable<object> li:
-                        Console.WriteLine($"List: {string.Join(", ", li)}");
-                        break;
-                    default:
-                        Console.WriteLine(i);
-                        break;
-                }
-            }
             List<string> list = new List<string>();
             for (int i = 0; i < courseList.Count; i++)
             {
                 list.Add(courseList[i].name);
+                Console.WriteLine(name + " har: " +courseList[i].name);
             }
             //foreach (var item in courseList)
             //{
             //    list.Add(item.ReturnCourseList(item.name));
             //}
-            return list;
+            
         }
 
-        public int ReturnTotalAmountOfStudents()
+        public int ReturnTotalAmountOfStudents() // Returns a number for how many studens there is
         {
             return numberOfStudents;
         }
 
-        public string ReturnFullName()
+        public string ReturnFullName() // returns student fullname
         {
             return $"{name} {lastName}";
         }
 
-        public string ReturnStudentInformation()
+        public string ReturnStudentInformation( ) // returns all information about a student
         {
             return $"{ReturnFullName()}\nEmail: {emailAddress}\n{addresse.ReturnAddress()}";
         }

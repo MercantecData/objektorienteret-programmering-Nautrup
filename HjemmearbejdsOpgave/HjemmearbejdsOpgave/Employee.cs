@@ -27,10 +27,9 @@ namespace HjemmearbejdsOpgave
             numberOfEmployees++;
         }
 
-        public bool IsEmployeePaied()
+        public bool IsItPayday() // Checks if an employees payments day is now
         {
-            DateTime createDate = new DateTime(2020, 8,
-                                    DateTime.DaysInMonth(2020, 8));
+            DateTime createDate = new DateTime(2020, 8, DateTime.DaysInMonth(2020, 8));
             if (DateTime.Now < createDate) // Not payed
             {
                 payed = false;
@@ -43,7 +42,7 @@ namespace HjemmearbejdsOpgave
             }
         }
         
-        public List<Course> ReturnCoursesHeTeaches()
+        public List<Course> ReturnCoursesHeTeaches() // Gets all the courses a employee has
         {
             List<Course> coursesList = new List<Course>();
             for (int i = 0; i < courses.Count; i++)
@@ -58,18 +57,12 @@ namespace HjemmearbejdsOpgave
             return coursesList;
         }
 
-
-        public int ReturnTotalAmountOfEmployees()
-        {
-            return numberOfEmployees;
-        }
-
-        public string ReturnFullName()
+        public string ReturnFullName() // returns an employees full name
         {
             return $"{name} {lastName}";
         }
 
-        public string ReturnEmployeeInformation()
+        public string ReturnEmployeeInformation() // returns all information about an employee
         {
             return $"{ReturnFullName()}\nTimeløn: {salary}\nEmail: {emailAddress}";
         }

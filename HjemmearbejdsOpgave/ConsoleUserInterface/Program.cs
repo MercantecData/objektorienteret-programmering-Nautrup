@@ -12,7 +12,9 @@ namespace ConsoleUserInterface
         static void Main(string[] args)
         {
             GenerateSchool();
-            jonasSkole.ReturnStudentCourse();
+            jonasSkole.PrintAStudentsCourses();
+            Console.ReadKey();
+            //jonasSkole.ReturnStudentCourse();
             MenuForTesting();
         }
 

@@ -19,7 +19,7 @@ namespace HjemmearbejdsOpgave
             this.country = country;
         }
 
-        public string ReturnAddress() // retunere hele ens addresse
+        public string ReturnAddress() // returns all information about a persons addresss
         {
             return $"{street}\n{city}\n{postalCode}\n{country}";
         }

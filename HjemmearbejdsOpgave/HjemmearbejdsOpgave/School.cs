@@ -14,17 +14,17 @@ namespace HjemmearbejdsOpgave
         {
             foreach (var item in employeeList)
             {
-                Console.WriteLine($"{item.name} har fået løn: {item.IsEmployeePaied()}");
+                Console.WriteLine($"{item.name} har fået løn: {item.IsItPayday()}");
             }
         }
 
-        public List<Student> AddStudent(Student person)
+        public List<Student> AddStudent(Student person) // adds a new student
         {
             studentList.Add(person);
             return studentList;
         }
 
-        public List<Employee> AddEmployee(Employee employee)
+        public List<Employee> AddEmployee(Employee employee)//Adds a new employee 
         {
             employeeList.Add(employee);
             return employeeList;
@@ -33,7 +33,7 @@ namespace HjemmearbejdsOpgave
         /// <summary>
         /// Skriv kun fornavnet på den ansatte du vil fjerne
         /// </summary>
-        public void RemoveEmployee(string employeeName)
+        public void RemoveEmployee(string employeeName) // removes an existing employee
         {
             for (int i = 0; i < employeeList.Count; i++)
             {
@@ -50,7 +50,7 @@ namespace HjemmearbejdsOpgave
         /// Skriv kun fornavnet på den elev du vil fjerne.
         /// </summary>
         /// <param name="studentName">Navnet på eleven</param>
-        public void RemoveStudent(string studentName)
+        public void RemoveStudent(string studentName) // removes an existing student
         {
             for (int i = 0; i < studentList.Count; i++)
             {
@@ -62,29 +62,25 @@ namespace HjemmearbejdsOpgave
             }
         }
 
+        //public void ReturnStudentCourse() // returns all active courses
+        //{
+        //    for (int i = 0; i < studentList.Count; i++)
+        //    {
+        //        Console.WriteLine(studentList[i].PrintcourseList());
+        //    }
+        //}
 
-        public void ReturnStudentCourse()
+        public void PrintAStudentsCourses()
         {
-            foreach (var i in studentList)
+            for (int i = 0; i < studentList.Capacity; i++)
             {
-                switch (i)
-                {
-                    case IEnumerable<object> li:
-                        Console.WriteLine($"List: {string.Join(", ", li)}");
-                        break;
-                    default:
-                        Console.WriteLine(i);
-                        break;
-                }
-            }
-            for (int i = 0; i < studentList.Count; i++)
-            {
-                Console.WriteLine(studentList[i].PrintcourseList());
+                studentList[i].PrintcourseList();
+                Console.ReadKey();
+                
             }
         }
 
-
-        public void ReturnEmployeeCourses()
+        public void ReturnEmployeeCourses() // gets all courses employees have
         {
             //List<Course> courses = new List<Course>();
 
@@ -94,7 +90,7 @@ namespace HjemmearbejdsOpgave
             }
         }
 
-        public void ReturnAllStudents()
+        public void ReturnAllStudents() // Prints all students in the school 
         {
 
             foreach (var student in studentList)
@@ -104,7 +100,7 @@ namespace HjemmearbejdsOpgave
             }
         }
 
-        public void ReturnAllEmployees()
+        public void ReturnAllEmployees() // prints all employees in the school
         {
             foreach (var employee in employeeList)
             {
