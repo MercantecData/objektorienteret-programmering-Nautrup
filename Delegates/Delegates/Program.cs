@@ -14,7 +14,8 @@ namespace Delegates
         public delegate void opgave1Delegate();
         public static void VoidDelegate()
         {
-            opgave1Delegate opgave1 = () => Console.WriteLine("Opgave 1");
+            Console.WriteLine("Opgave1");
+            opgave1Delegate opgave1 = () => Console.WriteLine("Opgave 1 kaldes");
             opgave1();
         }
 
