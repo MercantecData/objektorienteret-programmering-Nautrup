@@ -12,9 +12,19 @@ namespace PersonRegisterLibraryTest
 
         static void Main(string[] args)
         {
+
+            Dictionary<int, string> dictionary = new Dictionary<int, string>();
+            dictionary.Add(1, "Henning");
+            dictionary.Add(2, "Flemming");
+            dictionary.Add(3, "Henning");
+
+            foreach (var person in dictionary)
+            {
+                Console.WriteLine(person);
+            }
             //CreatePersonRegister();
             //Menu();
-            EditUser();
+            //EditUser();
 
             Console.ReadKey();
         }
@@ -134,7 +144,7 @@ namespace PersonRegisterLibraryTest
             Person tue = new Person(name: "Tue", lastName: "Ingolf", age: 32, city: "Viborg", job: new Job(title: "Prof. Skøjtedanser", salary: 189, description: "Kan drikke 100 bajere om dagen, uden og blæse over 0.5"));
             personList.Add(tue);
 
-            
+
         }
 
         // Dictionaries opgaven
