@@ -9,6 +9,7 @@ namespace Delegates
             VoidDelegate();
             Floatdelegate();
             ParamDelegate();
+                
         }
 
         public delegate void opgave1Delegate();

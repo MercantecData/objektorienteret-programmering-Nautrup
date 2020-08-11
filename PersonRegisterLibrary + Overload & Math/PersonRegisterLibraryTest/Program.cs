@@ -12,16 +12,6 @@ namespace PersonRegisterLibraryTest
 
         static void Main(string[] args)
         {
-
-            Dictionary<int, string> dictionary = new Dictionary<int, string>();
-            dictionary.Add(1, "Henning");
-            dictionary.Add(2, "Flemming");
-            dictionary.Add(3, "Henning");
-
-            foreach (var person in dictionary)
-            {
-                Console.WriteLine(person);
-            }
             //CreatePersonRegister();
             //Menu();
             //EditUser();
