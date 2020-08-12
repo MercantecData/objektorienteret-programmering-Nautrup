@@ -49,19 +49,19 @@ namespace AbstractClassesAndInterfaces
         {
             Person person = (Person)obj;
 
-            int ageCompare = age.CompareTo(person.age);     
+            int result = age.CompareTo(person.age);     
 
-            if (ageCompare == 0)
+            if (result == 0)
             {
-                ageCompare = age - person.age;
+                result = age - person.age;
             }
 
-            if (ageCompare == 1)
+            if (result == 1)
             {
-                ageCompare = gender.CompareTo(person.gender);
+                result = gender.CompareTo(person.gender);
             }
 
-            return ageCompare;
+            return result;
          }
 
         public string ReturnPersonInformation ()
